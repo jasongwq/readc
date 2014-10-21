@@ -10,22 +10,22 @@
 
 
 //============================================================================//
-//==                          UART³õÊ¼»¯º¯Êý                                ==//
+//==                          UARTåˆå§‹åŒ–å‡½æ•°                                ==//
 //============================================================================//
-//==Èë¿Ú²ÎÊý: ÎÞ                                                            ==//
-//==³ö¿Ú²ÎÊý: ÎÞ                                                            ==//
-//==·µ»ØÖµ:   ÎÞ                                                            ==//
+//==å…¥å£å‚æ•°: æ—                                                             ==//
+//==å‡ºå£å‚æ•°: æ—                                                             ==//
+//==è¿”å›žå€¼:   æ—                                                             ==//
 //============================================================================//
 void UARTInit(void)
 {
-  SysCtlPeripheralEnable(GPIO_PERIPH);        //Ê¹ÄÜUARTËùÔÚGPIO¶Ë¿Ú
-  SysCtlPeripheralEnable(UART_PERIPH);        //Ê¹ÄÜUARTÍâÉè
-  GPIOPinTypeUART(GPIO_USE_BASE, GPIO_PINS);  //Ê¹ÄÜUARTËùÔÚÒý½Å
+  SysCtlPeripheralEnable(GPIO_PERIPH);        //ä½¿èƒ½UARTæ‰€åœ¨GPIOç«¯å£
+  SysCtlPeripheralEnable(UART_PERIPH);        //ä½¿èƒ½UARTå¤–è®¾
+  GPIOPinTypeUART(GPIO_USE_BASE, GPIO_PINS);  //ä½¿èƒ½UARTæ‰€åœ¨å¼•è„š
   
   UARTConfigSet(UART_USE_BASE, BAUDRATE, UART_CONFIG_WLEN_8|
                                          UART_CONFIG_STOP_ONE|
                                          UART_CONFIG_PAR_NONE);
-  UARTEnable(UART_USE_BASE);                  //Ê¹ÄÜUART
+  UARTEnable(UART_USE_BASE);                  //ä½¿èƒ½UART
 }
 
 
@@ -33,12 +33,12 @@ void UARTInit(void)
 
 
 //============================================================================//
-//==                          ³¤ÕûÐÍ×ª»»º¯Êý                                ==//
+//==                          é•¿æ•´åž‹è½¬æ¢å‡½æ•°                                ==//
 //============================================================================//
-//==Èë¿Ú²ÎÊý: LongNum		Ö¸¶¨µÄ³¤ÕûÐÍ                                ==//
-//==	      *pArray		Ö¸Ïò±£´æ×ª»»ºóµÄÊý¾Ý(ËÄ×Ö½Ú)                ==//
-//==³ö¿Ú²ÎÊý: *pArray		Ö¸Ïò±£´æ×ª»»ºóµÄÊý¾Ý(ËÄ×Ö½Ú)                ==//
-//==·µ»ØÖµ:   ÎÞ                                                            ==//
+//==å…¥å£å‚æ•°: LongNum		æŒ‡å®šçš„é•¿æ•´åž‹                                ==//
+//==	      *pArray		æŒ‡å‘ä¿å­˜è½¬æ¢åŽçš„æ•°æ®(å››å­—èŠ‚)                ==//
+//==å‡ºå£å‚æ•°: *pArray		æŒ‡å‘ä¿å­˜è½¬æ¢åŽçš„æ•°æ®(å››å­—èŠ‚)                ==//
+//==è¿”å›žå€¼:   æ—                                                             ==//
 //============================================================================//
 void Long2Char(unsigned long longNum, unsigned char *pArray)
 {
@@ -57,12 +57,12 @@ void Long2Char(unsigned long longNum, unsigned char *pArray)
 
 
 //============================================================================//
-//==                          ³¤ÕûÐÍÊý·¢ËÍº¯Êý                              ==//
+//==                          é•¿æ•´åž‹æ•°å‘é€å‡½æ•°                              ==//
 //============================================================================//
-//==Èë¿Ú²ÎÊý: *LArray         Ö¸ÏòÐèÒª·¢ËÍµÄ³¤ÕûÐÍÊýÊý×é                    ==//
-//==          Num             ³¤ÕûÐÍÊý¾Ý¸öÊý                                ==//
-//==³ö¿Ú²ÎÊý: ÎÞ                                                            ==//
-//==·µ»ØÖµ:   ÎÞ                                                            ==//
+//==å…¥å£å‚æ•°: *LArray         æŒ‡å‘éœ€è¦å‘é€çš„é•¿æ•´åž‹æ•°æ•°ç»„                    ==//
+//==          Num             é•¿æ•´åž‹æ•°æ®ä¸ªæ•°                                ==//
+//==å‡ºå£å‚æ•°: æ—                                                             ==//
+//==è¿”å›žå€¼:   æ—                                                             ==//
 //============================================================================//
 void LongSend(unsigned long *LArray, unsigned int Num)
 {
@@ -73,7 +73,7 @@ void LongSend(unsigned long *LArray, unsigned int Num)
   for (i=0; i<Num; i++)
   {
     Long2Char(LArray[i], a);
-    UARTCharPut(UART_USE_BASE, a[0]);   //µÍ×Ö½Ú·ÅÔÚµÍµØÖ·,ÏÈ·¢ËÍµÍ×Ö½Ú
+    UARTCharPut(UART_USE_BASE, a[0]);   //ä½Žå­—èŠ‚æ”¾åœ¨ä½Žåœ°å€,å…ˆå‘é€ä½Žå­—èŠ‚
     UARTCharPut(UART_USE_BASE, a[1]);
     UARTCharPut(UART_USE_BASE, a[2]);
     UARTCharPut(UART_USE_BASE, a[3]);
@@ -85,12 +85,12 @@ void LongSend(unsigned long *LArray, unsigned int Num)
 
 
 //============================================================================//
-//==                            ÕûÐÍ×ª»»º¯Êý                                ==//
+//==                            æ•´åž‹è½¬æ¢å‡½æ•°                                ==//
 //============================================================================//
-//==Èë¿Ú²ÎÊý: ShortNum		Ö¸¶¨µÄÕûÐÍ                                  ==//
-//==	      *pArray		Ö¸Ïò±£´æ×ª»»ºóµÄÊý¾Ý(ËÄ×Ö½Ú)                ==//
-//==³ö¿Ú²ÎÊý: *pArray		Ö¸Ïò±£´æ×ª»»ºóµÄÊý¾Ý(ËÄ×Ö½Ú)                ==//
-//==·µ»ØÖµ:   ÎÞ                                                            ==//
+//==å…¥å£å‚æ•°: ShortNum		æŒ‡å®šçš„æ•´åž‹                                  ==//
+//==	      *pArray		æŒ‡å‘ä¿å­˜è½¬æ¢åŽçš„æ•°æ®(å››å­—èŠ‚)                ==//
+//==å‡ºå£å‚æ•°: *pArray		æŒ‡å‘ä¿å­˜è½¬æ¢åŽçš„æ•°æ®(å››å­—èŠ‚)                ==//
+//==è¿”å›žå€¼:   æ—                                                             ==//
 //============================================================================//
 void Short2Char(unsigned short ShortNum, unsigned char *pArray)
 {
@@ -109,12 +109,12 @@ void Short2Char(unsigned short ShortNum, unsigned char *pArray)
 
 
 //============================================================================//
-//==                            ÕûÐÍÊý·¢ËÍº¯Êý                              ==//
+//==                            æ•´åž‹æ•°å‘é€å‡½æ•°                              ==//
 //============================================================================//
-//==Èë¿Ú²ÎÊý: *SArray         Ö¸ÏòÐèÒª·¢ËÍµÄÕûÐÍÊýÊý×é                      ==//
-//==          Num             ÕûÐÍÊý¾Ý¸öÊý                                  ==//
-//==³ö¿Ú²ÎÊý: ÎÞ                                                            ==//
-//==·µ»ØÖµ:   ÎÞ                                                            ==//
+//==å…¥å£å‚æ•°: *SArray         æŒ‡å‘éœ€è¦å‘é€çš„æ•´åž‹æ•°æ•°ç»„                      ==//
+//==          Num             æ•´åž‹æ•°æ®ä¸ªæ•°                                  ==//
+//==å‡ºå£å‚æ•°: æ—                                                             ==//
+//==è¿”å›žå€¼:   æ—                                                             ==//
 //============================================================================//
 void ShortSend(unsigned short *SArray, unsigned int Num)
 {
@@ -125,7 +125,7 @@ void ShortSend(unsigned short *SArray, unsigned int Num)
   for (i=0; i<Num; i++)
   {
     Short2Char(SArray[i], a);
-    UARTCharPut(UART_USE_BASE, a[0]);   //µÍ×Ö½Ú·ÅÔÚµÍµØÖ·,ÏÈ·¢ËÍµÍ×Ö½Ú
+    UARTCharPut(UART_USE_BASE, a[0]);   //ä½Žå­—èŠ‚æ”¾åœ¨ä½Žåœ°å€,å…ˆå‘é€ä½Žå­—èŠ‚
     UARTCharPut(UART_USE_BASE, a[1]);
   }
 }
@@ -135,12 +135,12 @@ void ShortSend(unsigned short *SArray, unsigned int Num)
 
 
 //============================================================================//
-//==                           ¸¡µãÊý×ª»»º¯Êý                               ==//
+//==                           æµ®ç‚¹æ•°è½¬æ¢å‡½æ•°                               ==//
 //============================================================================//
-//==Èë¿Ú²ÎÊý: FloatNum		Ö¸¶¨µÄ¸¡µãÊý                                ==//
-//==	      *pArray		Ö¸Ïò±£´æ×ª»»ºóµÄÊý¾Ý(ËÄ×Ö½Ú)                ==//
-//==³ö¿Ú²ÎÊý: *pArray		Ö¸Ïò±£´æ×ª»»ºóµÄÊý¾Ý(ËÄ×Ö½Ú)                ==//
-//==·µ»ØÖµ:   ÎÞ                                                            ==//
+//==å…¥å£å‚æ•°: FloatNum		æŒ‡å®šçš„æµ®ç‚¹æ•°                                ==//
+//==	      *pArray		æŒ‡å‘ä¿å­˜è½¬æ¢åŽçš„æ•°æ®(å››å­—èŠ‚)                ==//
+//==å‡ºå£å‚æ•°: *pArray		æŒ‡å‘ä¿å­˜è½¬æ¢åŽçš„æ•°æ®(å››å­—èŠ‚)                ==//
+//==è¿”å›žå€¼:   æ—                                                             ==//
 //============================================================================//
 void Float2Char(float FloatNum, unsigned char *pArray)
 {
@@ -159,12 +159,12 @@ void Float2Char(float FloatNum, unsigned char *pArray)
 
 
 //============================================================================//
-//==                           ¸¡µãÊý·¢ËÍº¯Êý                               ==//
+//==                           æµ®ç‚¹æ•°å‘é€å‡½æ•°                               ==//
 //============================================================================//
-//==Èë¿Ú²ÎÊý: *Farray		Ö¸ÏòÐèÒª·¢ËÍµÄ¸¡µãÊýÊý×é                    ==//
-//==	      Num		¸¡µãÊý¸öÊý				    ==//
-//==³ö¿Ú²ÎÊý: ÎÞ                                                            ==//
-//==·µ»ØÖµ:   ÎÞ                                                            ==//
+//==å…¥å£å‚æ•°: *Farray		æŒ‡å‘éœ€è¦å‘é€çš„æµ®ç‚¹æ•°æ•°ç»„                    ==//
+//==	      Num		æµ®ç‚¹æ•°ä¸ªæ•°				    ==//
+//==å‡ºå£å‚æ•°: æ—                                                             ==//
+//==è¿”å›žå€¼:   æ—                                                             ==//
 //============================================================================//
 void FloatSend(float *FArray, unsigned int Num)
 {
@@ -189,26 +189,26 @@ float Watch3[N] = {0};
 float Watch4[N] = {0};
 
 
-//  Ö÷º¯Êý£¨³ÌÐòÈë¿Ú£©
+//  ä¸»å‡½æ•°ï¼ˆç¨‹åºå…¥å£ï¼‰
 int main(void)
 {
     unsigned long ulStart = 0;
     unsigned long ulStop  = 0;
     unsigned long ulInterval = 0;
     
-    jtagWait();                                             //  ·ÀÖ¹JTAGÊ§Ð§£¬ÖØÒª£¡
-    clockInit();                                            //  Ê±ÖÓ³õÊ¼»¯£º¾§Õñ£¬6MHz
+    jtagWait();                                             //  é˜²æ­¢JTAGå¤±æ•ˆï¼Œé‡è¦ï¼
+    clockInit();                                            //  æ—¶é’Ÿåˆå§‹åŒ–ï¼šæ™¶æŒ¯ï¼Œ6MHz
     UARTInit();
-    srand(SEED);                                            //  Ä£ÄâÔëÉù
+    srand(SEED);                                            //  æ¨¡æ‹Ÿå™ªå£°
     
     
     
-    TimerLoadSet(TIMER0_BASE, TIMER_A, TheSysClock);        // ÉèÖÃTimer³õÖµ£¬¶¨Ê±1s
-    TimerEnable(TIMER0_BASE, TIMER_A);                      // Ê¹ÄÜTimer¼ÆÊý
+    TimerLoadSet(TIMER0_BASE, TIMER_A, TheSysClock);        // è®¾ç½®Timeråˆå€¼ï¼Œå®šæ—¶1s
+    TimerEnable(TIMER0_BASE, TIMER_A);                      // ä½¿èƒ½Timerè®¡æ•°
     ulStart = TimerValueGet(TIMER0_BASE, TIMER_A);
     KalMan();
     ulStop  = TimerValueGet(TIMER0_BASE, TIMER_A);
-    ulInterval = (ulStart-ulStop) / 50;                     // ¼ÆËãÊ±¼ä¼ä¸ô(µ¥Î»us)
+    ulInterval = (ulStart-ulStop) / 50;                     // è®¡ç®—æ—¶é—´é—´éš”(å•ä½us)
     
     
     

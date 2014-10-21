@@ -1,7 +1,7 @@
 #ifndef _MATRIX_H
 #define _MATRIX_H
 
-#define   LENGTH      10        //  ÓÉÓÚÊ¹ÓÃmallocº¯Êı¶¯Ì¬·ÖÅäÄÚ´æ»á³ö´í, ´Ë´¦¶¨Òå·ÖÅä¹Ì¶¨³¤¶ÈµÄÊı×é´óĞ¡
+#define   LENGTH      10        //  ç”±äºä½¿ç”¨mallocå‡½æ•°åŠ¨æ€åˆ†é…å†…å­˜ä¼šå‡ºé”™, æ­¤å¤„å®šä¹‰åˆ†é…å›ºå®šé•¿åº¦çš„æ•°ç»„å¤§å°
 
 
 extern void   MatrixAdd(float *a, float *b, float *c, unsigned char m, unsigned char n);

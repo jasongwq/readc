@@ -7,41 +7,41 @@
 
 
 //===========================================================================================================//
-//==  ×¢ÒâÐèÒª:  A_COLUMN==X_ROW   C_COLUMN==X_ROW
-//==             ¿ÉÄÜÐèÒª¸Ä±äÖÐ¼ä±äÁ¿µÄ´óÐ¡
+//==  æ³¨æ„éœ€è¦:  A_COLUMN==X_ROW   C_COLUMN==X_ROW
+//==             å¯èƒ½éœ€è¦æ”¹å˜ä¸­é—´å˜é‡çš„å¤§å°
 //===========================================================================================================//
 #define   SYS_ORDER   2
 
 
 
-#define   A_ROW       2           //  ¶¨ÒåA¾ØÕóµÄÐÐÊý
-#define   A_COLUMN    2           //  ¶¨ÒåA¾ØÕóµÄÁÐÊý
-#define   A_LENGTH    4           //  ±£´æA¾ØÕóµÄÊý×éµÄ´óÐ¡(A_ROW*A_COLUMN)
-                                  //  A¾ØÕóµÄ³õÊ¼Öµ
-                                  //  A¾ØÕó±£³Ö²»±ä(Ò²¿ÉÒÔ¶ÔA½øÐÐµü´ú)
+#define   A_ROW       2           //  å®šä¹‰AçŸ©é˜µçš„è¡Œæ•°
+#define   A_COLUMN    2           //  å®šä¹‰AçŸ©é˜µçš„åˆ—æ•°
+#define   A_LENGTH    4           //  ä¿å­˜AçŸ©é˜µçš„æ•°ç»„çš„å¤§å°(A_ROW*A_COLUMN)
+                                  //  AçŸ©é˜µçš„åˆå§‹å€¼
+                                  //  AçŸ©é˜µä¿æŒä¸å˜(ä¹Ÿå¯ä»¥å¯¹Aè¿›è¡Œè¿­ä»£)
 //#define   A_VALUE     {1, -0.01, 0, 1}
 #define   A_VALUE     {1, -0.01, 0, 1}
 
 
 
 
-//ÔÚÄ³Ð©Çé¿öÏÂB¾ØÕó¿ÉÒÔ²»Ê¹ÓÃ
-#define   B_ROW       1           //  ¶¨ÒåB¾ØÕóµÄÐÐÊý
-#define   B_COLUMN    2           //  ¶¨ÒåB¾ØÕóµÄÁÐÊý
-#define   B_LENGTH    2           //  ±£´æB¾ØÕóµÄÊý×éµÄ´óÐ¡(B_ROW*B_COLUMN)
-                                  //  B¾ØÕóµÄ³õÊ¼Öµ
-                                  //  B¾ØÕó±£³Ö²»±ä
+//åœ¨æŸäº›æƒ…å†µä¸‹BçŸ©é˜µå¯ä»¥ä¸ä½¿ç”¨
+#define   B_ROW       1           //  å®šä¹‰BçŸ©é˜µçš„è¡Œæ•°
+#define   B_COLUMN    2           //  å®šä¹‰BçŸ©é˜µçš„åˆ—æ•°
+#define   B_LENGTH    2           //  ä¿å­˜BçŸ©é˜µçš„æ•°ç»„çš„å¤§å°(B_ROW*B_COLUMN)
+                                  //  BçŸ©é˜µçš„åˆå§‹å€¼
+                                  //  BçŸ©é˜µä¿æŒä¸å˜
 //#define   B_VALUE     {0.01, 0}
 #define   B_VALUE     {0.01, 0}
 
 
 
 
-#define   C_ROW       1           //  ¶¨ÒåC¾ØÕóµÄÐÐÊý
-#define   C_COLUMN    2           //  ¶¨ÒåC¾ØÕóµÄÁÐÊý
-#define   C_LENGTH    2           //  ±£´æC¾ØÕóµÄÊý×éµÄ´óÐ¡(C_ROW*C_COLUMN)
-                                  //  C¾ØÕóµÄ³õÊ¼Öµ: C¾ØÕóÊÇ¹Û²â×ªÒÆ¾ØÕó, ÀýÈç¿ÉÒÔ½øÐÐµ¥Î»×ª»»,·ù¶È¸Ä±äµÈ
-                                  //  C¾ØÕó±£³Ö²»±ä
+#define   C_ROW       1           //  å®šä¹‰CçŸ©é˜µçš„è¡Œæ•°
+#define   C_COLUMN    2           //  å®šä¹‰CçŸ©é˜µçš„åˆ—æ•°
+#define   C_LENGTH    2           //  ä¿å­˜CçŸ©é˜µçš„æ•°ç»„çš„å¤§å°(C_ROW*C_COLUMN)
+                                  //  CçŸ©é˜µçš„åˆå§‹å€¼: CçŸ©é˜µæ˜¯è§‚æµ‹è½¬ç§»çŸ©é˜µ, ä¾‹å¦‚å¯ä»¥è¿›è¡Œå•ä½è½¬æ¢,å¹…åº¦æ”¹å˜ç­‰
+                                  //  CçŸ©é˜µä¿æŒä¸å˜
 //#define   C_VALUE     {1, 0}
 #define   C_VALUE     {1, 0}
 
@@ -49,32 +49,32 @@
 
 
 
-#define   I_ROW       2           //  ¶¨Òåµ¥Î»¾ØÕóµÄÐÐÊý
-#define   I_COLUMN    2           //  ¶¨Òåµ¥Î»¾ØÕóµÄÁÐÊý
-#define   I_LENGTH    4           //  ±£´æµ¥Î»¾ØÕóµÄÊý×éµÄ´óÐ¡(I_ROW*I_COLUMN)
-                                  //  I¾ØÕóµÄ³õÊ¼Öµ
+#define   I_ROW       2           //  å®šä¹‰å•ä½çŸ©é˜µçš„è¡Œæ•°
+#define   I_COLUMN    2           //  å®šä¹‰å•ä½çŸ©é˜µçš„åˆ—æ•°
+#define   I_LENGTH    4           //  ä¿å­˜å•ä½çŸ©é˜µçš„æ•°ç»„çš„å¤§å°(I_ROW*I_COLUMN)
+                                  //  IçŸ©é˜µçš„åˆå§‹å€¼
 #define   I_VALUE     {1, 0, 0, 1}
 
 
 
 
 
-#define   K_ROW       2           //  ¶¨ÒåK¾ØÕóµÄÐÐÊý
-#define   K_COLUMN    1           //  ¶¨ÒåK¾ØÕóµÄÁÐÊý
-#define   K_LENGTH    2           //  ±£´æK¾ØÕóµÄÊý×éµÄ´óÐ¡(K_ROW*K_COLUMN)
-                                  //  K¾ØÕóµÄ³õÊ¼Öµ: KÊÇ¿¨¶ûÂüÔöÒæ,ÓÃÓÚÔÚ¼ÆËã¹ý³ÌÖÐ¹À¼Æ×îÓÅÖµ,²»ÊÇ³õÊ¼Ìõ¼þÖ®Ò»,¿ÉÒÔÈÎÒâ¸³Öµ
-                                  //  K¾ØÕó»áËæ×Å¼ÆËã¸Ä±ä
+#define   K_ROW       2           //  å®šä¹‰KçŸ©é˜µçš„è¡Œæ•°
+#define   K_COLUMN    1           //  å®šä¹‰KçŸ©é˜µçš„åˆ—æ•°
+#define   K_LENGTH    2           //  ä¿å­˜KçŸ©é˜µçš„æ•°ç»„çš„å¤§å°(K_ROW*K_COLUMN)
+                                  //  KçŸ©é˜µçš„åˆå§‹å€¼: Kæ˜¯å¡å°”æ›¼å¢žç›Š,ç”¨äºŽåœ¨è®¡ç®—è¿‡ç¨‹ä¸­ä¼°è®¡æœ€ä¼˜å€¼,ä¸æ˜¯åˆå§‹æ¡ä»¶ä¹‹ä¸€,å¯ä»¥ä»»æ„èµ‹å€¼
+                                  //  KçŸ©é˜µä¼šéšç€è®¡ç®—æ”¹å˜
 #define   K_VALUE     {0, 0}
 
 
 
 
 
-#define   P_ROW       2           //  ¶¨ÒåP¾ØÕóµÄÐÐÊý
-#define   P_COLUMN    2           //  ¶¨ÒåP¾ØÕóµÄÁÐÊý
-#define   P_LENGTH    4           //  ±£´æP¾ØÕóµÄÊý×éµÄ´óÐ¡(P_ROW*P_COLUMN)
-                                  //  P¾ØÕóµÄ³õÊ¼Öµ: PµÄ³õÖµÊÇ¶ÔµÚÒ»´ÎÖµµÄÔ¤²âÐÅÈÎ³Ì¶È,ÈÎÒâ¸³Öµ¼´¿É(²»ÄÜÎª0);Ö®ºóPµÄÖµÊÇ±íÊ¾¶ÔÔ¤²âÖµµÄÐÅÈÎ³Ì¶È;
-                                  //  P¾ØÕó»áËæ×Å¼ÆËã¸Ä±ä
+#define   P_ROW       2           //  å®šä¹‰PçŸ©é˜µçš„è¡Œæ•°
+#define   P_COLUMN    2           //  å®šä¹‰PçŸ©é˜µçš„åˆ—æ•°
+#define   P_LENGTH    4           //  ä¿å­˜PçŸ©é˜µçš„æ•°ç»„çš„å¤§å°(P_ROW*P_COLUMN)
+                                  //  PçŸ©é˜µçš„åˆå§‹å€¼: Pçš„åˆå€¼æ˜¯å¯¹ç¬¬ä¸€æ¬¡å€¼çš„é¢„æµ‹ä¿¡ä»»ç¨‹åº¦,ä»»æ„èµ‹å€¼å³å¯(ä¸èƒ½ä¸º0);ä¹‹åŽPçš„å€¼æ˜¯è¡¨ç¤ºå¯¹é¢„æµ‹å€¼çš„ä¿¡ä»»ç¨‹åº¦;
+                                  //  PçŸ©é˜µä¼šéšç€è®¡ç®—æ”¹å˜
 //#define   P_VALUE     {1, 0, 0, 1}
 #define   P_VALUE     {10, 0, 0, 10}
 
@@ -82,11 +82,11 @@
 
 
 
-#define   Q_ROW       2           //  ¶¨ÒåQ¾ØÕóµÄÐÐÊý
-#define   Q_COLUMN    2           //  ¶¨ÒåQ¾ØÕóµÄÁÐÊý
-#define   Q_LENGTH    4           //  ±£´æQ¾ØÕóµÄÊý×éµÄ´óÐ¡(Q_ROW*Q_COLUMN)
-                                  //  Q¾ØÕóµÄ³õÊ¼Öµ: Q±íÊ¾¶Ô¸ù¾ÝÉÏÒ»´Î×îÓÅÖµËù¼ÆËã³öµÄÔ¤²âÖµµÄÐÅÈÎ³Ì¶È,QÔ½´ó±íÊ¾Ô½²»ÐÅÈÎ;¹ÊQÔ½´óÔ½²»Æ½»¬
-                                  //  Q¾ØÕó±£³Ö²»±ä(QÓëPµÄÇø±ðÊÇQ±£³Ö²»±ä,QÊÇ¸ù¾ÝÄ£ÐÍµÃµ½,PÊÇ¿¨¶ûÂü¹ý³ÌÖÐ¼ÆËãµÃµ½)
+#define   Q_ROW       2           //  å®šä¹‰QçŸ©é˜µçš„è¡Œæ•°
+#define   Q_COLUMN    2           //  å®šä¹‰QçŸ©é˜µçš„åˆ—æ•°
+#define   Q_LENGTH    4           //  ä¿å­˜QçŸ©é˜µçš„æ•°ç»„çš„å¤§å°(Q_ROW*Q_COLUMN)
+                                  //  QçŸ©é˜µçš„åˆå§‹å€¼: Qè¡¨ç¤ºå¯¹æ ¹æ®ä¸Šä¸€æ¬¡æœ€ä¼˜å€¼æ‰€è®¡ç®—å‡ºçš„é¢„æµ‹å€¼çš„ä¿¡ä»»ç¨‹åº¦,Qè¶Šå¤§è¡¨ç¤ºè¶Šä¸ä¿¡ä»»;æ•…Qè¶Šå¤§è¶Šä¸å¹³æ»‘
+                                  //  QçŸ©é˜µä¿æŒä¸å˜(Qä¸ŽPçš„åŒºåˆ«æ˜¯Qä¿æŒä¸å˜,Qæ˜¯æ ¹æ®æ¨¡åž‹å¾—åˆ°,Pæ˜¯å¡å°”æ›¼è¿‡ç¨‹ä¸­è®¡ç®—å¾—åˆ°)
 //#define   Q_VALUE     {0.0001, 0, 0, 0}
 #define   Q_VALUE     {0.01, 0, 0, 0}
 
@@ -94,11 +94,11 @@
 
 
 
-#define   R_ROW       1           //  ¶¨ÒåR¾ØÕóµÄÐÐÊý
-#define   R_COLUMN    1           //  ¶¨ÒåR¾ØÕóµÄÁÐÊý
-#define   R_LENGTH    1           //  ±£´æR¾ØÕóµÄÊý×éµÄ´óÐ¡(R_ROW*R_COLUMN)
-                                  //  R¾ØÕóµÄ³õÊ¼Öµ: R±íÊ¾±¾´Î²âÁ¿ÖµµÄÔëÉù·½²î(Ò²¿ÉÒÔÀí½âÎª¶Ô²âÁ¿ÖµµÄÐÅÈÎ³Ì¶È),RÔ½´ó±íÊ¾²âÁ¿¹ý³ÌÖÐµÄÔëÉùÔ½´ó;µ±RºÜÐ¡Ê±,ÒªÊÊµ±¼õÐ¡QµÄÖµ,¼´¶ÔÔ¤²âÖµµÄÐÅÈÎ³Ì¶ÈÒª¼Ó´ó
-                                  //  R¾ØÕó±£³Ö²»±ä
+#define   R_ROW       1           //  å®šä¹‰RçŸ©é˜µçš„è¡Œæ•°
+#define   R_COLUMN    1           //  å®šä¹‰RçŸ©é˜µçš„åˆ—æ•°
+#define   R_LENGTH    1           //  ä¿å­˜RçŸ©é˜µçš„æ•°ç»„çš„å¤§å°(R_ROW*R_COLUMN)
+                                  //  RçŸ©é˜µçš„åˆå§‹å€¼: Rè¡¨ç¤ºæœ¬æ¬¡æµ‹é‡å€¼çš„å™ªå£°æ–¹å·®(ä¹Ÿå¯ä»¥ç†è§£ä¸ºå¯¹æµ‹é‡å€¼çš„ä¿¡ä»»ç¨‹åº¦),Rè¶Šå¤§è¡¨ç¤ºæµ‹é‡è¿‡ç¨‹ä¸­çš„å™ªå£°è¶Šå¤§;å½“Rå¾ˆå°æ—¶,è¦é€‚å½“å‡å°Qçš„å€¼,å³å¯¹é¢„æµ‹å€¼çš„ä¿¡ä»»ç¨‹åº¦è¦åŠ å¤§
+                                  //  RçŸ©é˜µä¿æŒä¸å˜
 //#define   R_VALUE     {0.4}
 #define   R_VALUE     {0.4}
 
@@ -106,11 +106,11 @@
 
 
 
-#define   X_ROW       2           //  ¶¨ÒåX¾ØÕó(¹À¼ÆÖµºÍ×îÓÅÖµ)µÄÐÐÊý
-#define   X_COLUMN    1           //  ¶¨ÒåX¾ØÕó(¹À¼ÆÖµºÍ×îÓÅÖµ)µÄÁÐÊý
-#define   X_LENGTH    2           //  ±£´æX¾ØÕó(¹À¼ÆÖµºÍ×îÓÅÖµ)µÄÊý×éµÄ´óÐ¡(X_ROW*X_COLUMN)
-                                  //  X¾ØÕóµÄ³õÊ¼Öµ: XµÄ³õÖµÊÇ¶ÔµÚÒ»´ÎÖµµÄÔ¤²â,ÈÎÒâ¸³Öµ¼´¿É,µ«¾¡Á¿±Æ½üÕæÊµµÄ³õÊ¼Öµ;Ö®ºóXµÄÖµÊÇ¿¨¶ûÂü¹ý³ÌÖÐÔ¤²âÖµ
-                                  //  X¾ØÕó»áËæ×Å¼ÆËã¸Ä±ä
+#define   X_ROW       2           //  å®šä¹‰XçŸ©é˜µ(ä¼°è®¡å€¼å’Œæœ€ä¼˜å€¼)çš„è¡Œæ•°
+#define   X_COLUMN    1           //  å®šä¹‰XçŸ©é˜µ(ä¼°è®¡å€¼å’Œæœ€ä¼˜å€¼)çš„åˆ—æ•°
+#define   X_LENGTH    2           //  ä¿å­˜XçŸ©é˜µ(ä¼°è®¡å€¼å’Œæœ€ä¼˜å€¼)çš„æ•°ç»„çš„å¤§å°(X_ROW*X_COLUMN)
+                                  //  XçŸ©é˜µçš„åˆå§‹å€¼: Xçš„åˆå€¼æ˜¯å¯¹ç¬¬ä¸€æ¬¡å€¼çš„é¢„æµ‹,ä»»æ„èµ‹å€¼å³å¯,ä½†å°½é‡é€¼è¿‘çœŸå®žçš„åˆå§‹å€¼;ä¹‹åŽXçš„å€¼æ˜¯å¡å°”æ›¼è¿‡ç¨‹ä¸­é¢„æµ‹å€¼
+                                  //  XçŸ©é˜µä¼šéšç€è®¡ç®—æ”¹å˜
 //#define   X_VALUE     {1, 1}
 #define   X_VALUE     {1, 1}
 
@@ -118,28 +118,28 @@
 
 
 
-#define   Y_ROW       1           //  ¶¨ÒåY¾ØÕóÐÐÊý
-#define   Y_COLUMN    1           //  ¶¨ÒåY¾ØÕóµÄÁÐÊý
-#define   Y_LENGTH    1           //  ±£´æY¾ØÕóµÄÊý×éµÄ´óÐ¡(Y_ROW*Y_COLUMN)
-                                  //  Y¾ØÕóµÄ³õÊ¼Öµ,²»ÊÇ³õÊ¼»¯Ìõ¼þÖ®Ò»,ÈÎÒâ¸³Öµ¼´¿É
-                                  //  Y¾ØÕó»áËæ×Å¼ÆËã¸Ä±ä
+#define   Y_ROW       1           //  å®šä¹‰YçŸ©é˜µè¡Œæ•°
+#define   Y_COLUMN    1           //  å®šä¹‰YçŸ©é˜µçš„åˆ—æ•°
+#define   Y_LENGTH    1           //  ä¿å­˜YçŸ©é˜µçš„æ•°ç»„çš„å¤§å°(Y_ROW*Y_COLUMN)
+                                  //  YçŸ©é˜µçš„åˆå§‹å€¼,ä¸æ˜¯åˆå§‹åŒ–æ¡ä»¶ä¹‹ä¸€,ä»»æ„èµ‹å€¼å³å¯
+                                  //  YçŸ©é˜µä¼šéšç€è®¡ç®—æ”¹å˜
 #define   Y_VALUE     {0}
 
 
-extern float         Y[Y_LENGTH];                   //  ²âÁ¿Öµ(Ã¿´Î²âÁ¿µÄÊý¾ÝÐèÒª´æÈë¸ÃÊý×é)
-extern float         I[I_LENGTH];                   //  µ¥Î»¾ØÕó
-extern float         X[X_LENGTH];                   //  µ±Ç°×´Ì¬µÄÔ¤²âÖµ
-extern float         P[P_LENGTH];                   //  µ±Ç°×´Ì¬µÄÔ¤²âÖµµÄÐ­·½²î
-extern float         K[K_LENGTH];                   //  ¿¨¶ûÂüÔöÒæ
-extern float         Temp1[1];                      //  ¸¨Öú±äÁ¿
-extern float         A[A_LENGTH];                   //  ×´Ì¬×ªÒÆ¾ØÕó
-extern float         B[B_LENGTH];                   //  ÏµÍ³²ÎÊý
-extern float         Q[Q_LENGTH];                   //  ÏµÍ³¹ý³ÌµÄÐ­·½²î
-extern float         C[C_LENGTH];                   //  ¹Û²â¾ØÕó×ªÒÆ¾ØÕó
-extern float         R[R_LENGTH];                   //  ²âÁ¿¹ý³ÌµÄÐ­·½²î
-extern float         Temp2[X_LENGTH];               //  ¸¨Öú±äÁ¿, Í¬Ê±±£´ætOpt.XPreOpt[]µÄ³õÊ¼»¯Öµ
-extern float         Temp22[X_LENGTH];              //  ¸¨Öú±äÁ¿
-extern float         Temp4[P_LENGTH];               //  ¸¨Öú±äÁ¿, Í¬Ê±±£´ætCov.PPreOpt[]µÄ³õÊ¼»¯Öµ
+extern float         Y[Y_LENGTH];                   //  æµ‹é‡å€¼(æ¯æ¬¡æµ‹é‡çš„æ•°æ®éœ€è¦å­˜å…¥è¯¥æ•°ç»„)
+extern float         I[I_LENGTH];                   //  å•ä½çŸ©é˜µ
+extern float         X[X_LENGTH];                   //  å½“å‰çŠ¶æ€çš„é¢„æµ‹å€¼
+extern float         P[P_LENGTH];                   //  å½“å‰çŠ¶æ€çš„é¢„æµ‹å€¼çš„åæ–¹å·®
+extern float         K[K_LENGTH];                   //  å¡å°”æ›¼å¢žç›Š
+extern float         Temp1[1];                      //  è¾…åŠ©å˜é‡
+extern float         A[A_LENGTH];                   //  çŠ¶æ€è½¬ç§»çŸ©é˜µ
+extern float         B[B_LENGTH];                   //  ç³»ç»Ÿå‚æ•°
+extern float         Q[Q_LENGTH];                   //  ç³»ç»Ÿè¿‡ç¨‹çš„åæ–¹å·®
+extern float         C[C_LENGTH];                   //  è§‚æµ‹çŸ©é˜µè½¬ç§»çŸ©é˜µ
+extern float         R[R_LENGTH];                   //  æµ‹é‡è¿‡ç¨‹çš„åæ–¹å·®
+extern float         Temp2[X_LENGTH];               //  è¾…åŠ©å˜é‡, åŒæ—¶ä¿å­˜tOpt.XPreOpt[]çš„åˆå§‹åŒ–å€¼
+extern float         Temp22[X_LENGTH];              //  è¾…åŠ©å˜é‡
+extern float         Temp4[P_LENGTH];               //  è¾…åŠ©å˜é‡, åŒæ—¶ä¿å­˜tCov.PPreOpt[]çš„åˆå§‹åŒ–å€¼
 
 
 extern void   Random(unsigned long Num, float *S, float mu, float sigma);
