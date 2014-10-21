@@ -12,4 +12,4 @@ Create Tagfile=0
 [Files]
 0=.\
 [Group Filter]
-.\=*.h;*.hpp;*.hxx;
+.\=*.c;*.h;
