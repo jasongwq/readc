@@ -1,0 +1,323 @@
+###############################################################################
+#                                                                             #
+# IAR ELF Linker V5.30.0.51174/W32 for ARM              16/Dec/2009  09:46:28 #
+# Copyright 2007-2009 IAR Systems AB.                                         #
+#                                                                             #
+#    Output file  =  E:\»úÆ÷ÈË¶Ó\ARM\EasyARM1138\Ô´³ÌÐò\¿¨¶ûÂüÂË²¨\Debug\Exe\ #
+#                    Demo.out                                                 #
+#    Map file     =  E:\»úÆ÷ÈË¶Ó\ARM\EasyARM1138\Ô´³ÌÐò\¿¨¶ûÂüÂË²¨\Debug\List #
+#                    \Demo.map                                                #
+#    Command line =  "C:\Program Files\IAR Systems\arm\lib\Luminary\driverlib #
+#                    .a" E:\»úÆ÷ÈË¶Ó\ARM\EasyARM1138\Ô´³ÌÐò\¿¨¶ûÂüÂË²¨\Debug\ #
+#                    Obj\kalman.o E:\»úÆ÷ÈË¶Ó\ARM\EasyARM1138\Ô´³ÌÐò\¿¨¶ûÂüÂË #
+#                    ²¨\Debug\Obj\main.o E:\»úÆ÷ÈË¶Ó\ARM\EasyARM1138\Ô´³ÌÐò\¿ #
+#                    ¨¶ûÂüÂË²¨\Debug\Obj\matrix.o                             #
+#                    E:\»úÆ÷ÈË¶Ó\ARM\EasyARM1138\Ô´³ÌÐò\¿¨¶ûÂüÂË²¨\Debug\Obj\ #
+#                    startup_ewarm.o E:\»úÆ÷ÈË¶Ó\ARM\EasyARM1138\Ô´³ÌÐò\¿¨¶ûÂ #
+#                    üÂË²¨\Debug\Obj\systemInit.o -o                          #
+#                    E:\»úÆ÷ÈË¶Ó\ARM\EasyARM1138\Ô´³ÌÐò\¿¨¶ûÂüÂË²¨\Debug\Exe\ #
+#                    Demo.out --map E:\»úÆ÷ÈË¶Ó\ARM\EasyARM1138\Ô´³ÌÐò\¿¨¶ûÂü #
+#                    ÂË²¨\Debug\List\Demo.map --config "C:\Program Files\IAR  #
+#                    Systems\arm\config\Luminary\LM3S.icf" --semihosting      #
+#                    --entry __iar_program_start                              #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+__endian      = little
+__thumb_aware = enabled
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at start of [mem:0x0-mem:0x3ffff] { ro section .intvec };
+"P1":  place in [from mem:0x0 to mem:0x3ffff] { ro };
+"P2":  place in [from mem:0x20000000 to mem:0x2000ffff] { rw, block HEAP };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A1":                                      0x100
+  .intvec            const    0x00000000   0x100  startup_ewarm.o [1]
+                            - 0x00000100   0x100
+
+"P1":                                     0x1a0c
+  .text              ro code  0x00000100   0x5a6  matrix.o [1]
+  .text              ro code  0x000006a8   0x364  sysctl.o [4]
+  .text              ro code  0x00000a0c   0x2bc  DblDiv.o [5]
+  .text              ro code  0x00000cc8   0x1d8  kalman.o [1]
+  .text              ro code  0x00000ea0   0x1bc  gpio.o [4]
+  .text              ro code  0x0000105c   0x17e  DblSub.o [5]
+  .text              ro code  0x000011dc    0xe6  DblAdd.o [5]
+  .text              ro code  0x000012c4    0xe4  main.o [1]
+  .text              ro code  0x000013a8    0xe4  FltSub.o [5]
+  .text              ro code  0x0000148c    0xda  FltMul.o [5]
+  .text              ro code  0x00001568    0xd4  adc.o [4]
+  .text              ro code  0x0000163c    0xc8  interrupt.o [4]
+  .text              ro code  0x00001704    0x94  DblToFlt.o [5]
+  .text              ro code  0x00001798    0x8c  FltAdd.o [5]
+  .text              ro code  0x00001824    0x6c  uart.o [4]
+  .rodata            const    0x00001890    0x5c  sysctl.o [4]
+  .text              ro code  0x000018ec    0x52  FltToDbl.o [5]
+  .text              ro code  0x00001940    0x50  systemInit.o [1]
+  .text              ro code  0x00001990    0x24  FltCmpLe.o [5]
+  .text              ro code  0x000019b4    0x24  copy_init2.o [5]
+  .iar.init_table    const    0x000019d8    0x24  - Linker created -
+  .text              ro code  0x000019fc    0x20  DblCmpEq.o [5]
+  .text              ro code  0x00001a1c    0x1c  data_init2.o [5]
+  .text              ro code  0x00001a38    0x1a  zero_init2.o [5]
+  .text              ro code  0x00001a54    0x18  cmain.o [5]
+  .text              ro code  0x00001a6c    0x18  iarwstd.o [6]
+  .text              ro code  0x00001a84    0x14  I32DivMod.o [5]
+  .text              ro code  0x00001a98    0x14  exit.o [6]
+  CODE               ro code  0x00001aac    0x14  cpu.o [4]
+  .rodata            const    0x00001ac0     0xc  sysctl.o [4]
+  .text              ro code  0x00001acc     0xa  cexit.o [5]
+  .text              ro code  0x00001ad6     0x6  startup_ewarm.o [1]
+  .text              ro code  0x00001adc     0x6  exit.o [3]
+  .text              ro code  0x00001ae4     0x2  IntDivZer.o [5]
+  .text              ro code  0x00001ae6     0x4  low_level_init.o [3]
+  Initializer bytes  ro data  0x00001aec    0x20  <for P2 s0>
+                            - 0x00001b0c  0x1a0c
+
+"P2", part 1 of 3:                         0x400
+  .noinit            uninit   0x20000000   0x400  startup_ewarm.o [1]
+                            - 0x20000400   0x400
+
+"P2", part 2 of 3:                         0x12c
+  VTABLE             zero     0x20000400   0x100  interrupt.o [4]
+  .bss               zero     0x20000500     0x8  kalman.o [1]
+  .bss               zero     0x20000508     0x8  kalman.o [1]
+  .bss               zero     0x20000510     0x4  kalman.o [1]
+  .bss               zero     0x20000514     0x4  kalman.o [1]
+  .bss               zero     0x20000518     0x4  kalman.o [1]
+  .bss               zero     0x2000051c     0x4  kalman.o [1]
+  .bss               zero     0x20000520     0x4  kalman.o [1]
+  .bss               zero     0x20000524     0x4  iarwstd.o [6]
+  .bss               zero     0x20000528     0x1  main.o [1]
+                            - 0x20000529   0x129
+
+"P2", part 3 of 3:                          0x20
+  P2 s0                       0x2000052c    0x20  <Init block>
+    .data            inited   0x2000052c     0x4  kalman.o [1]
+    .data            inited   0x20000530     0x4  kalman.o [1]
+    .data            inited   0x20000534     0x4  kalman.o [1]
+    .data            inited   0x20000538     0x4  kalman.o [1]
+    .data            inited   0x2000053c     0x4  kalman.o [1]
+    .data            inited   0x20000540     0x4  kalman.o [1]
+    .data            inited   0x20000544     0x4  kalman.o [1]
+    .data            inited   0x20000548     0x4  systemInit.o [1]
+                            - 0x2000054c    0x20
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init2)
+    1 destination range, total size 0x129:
+          0x20000400  0x129
+
+Copy (__iar_copy_init2)
+    1 source range, total size 0x20 (100% of destination):
+              0x1aec   0x20
+    1 destination range, total size 0x20:
+          0x2000052c   0x20
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+E:\»úÆ÷ÈË¶Ó\ARM\EasyARM1138\Ô´³ÌÐò\¿¨¶ûÂüÂË²¨\Debug\Obj: [1]
+    kalman.o              472       28       64
+    main.o                228                 1
+    matrix.o            1 446
+    startup_ewarm.o         6      256    1 024
+    systemInit.o           80        4        4
+    -------------------------------------------
+    Total:              2 232      288    1 093
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl7M_tl_in.a: [3]
+    exit.o                  6
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                 10
+
+driverlib.a: [4]
+    adc.o                 212
+    cpu.o                  20
+    gpio.o                444
+    interrupt.o           200               256
+    sysctl.o              868      104
+    uart.o                108
+    -------------------------------------------
+    Total:              1 852      104      256
+
+rt7M_tl.a: [5]
+    DblAdd.o              230
+    DblCmpEq.o             32
+    DblDiv.o              700
+    DblSub.o              382
+    DblToFlt.o            148
+    FltAdd.o              140
+    FltCmpLe.o             36
+    FltMul.o              218
+    FltSub.o              228
+    FltToDbl.o             82
+    I32DivMod.o            20
+    IntDivZer.o             2
+    cexit.o                10
+    cmain.o                24
+    copy_init2.o           36
+    data_init2.o           28
+    zero_init2.o           26
+    -------------------------------------------
+    Total:              2 342
+
+shb_l.a: [6]
+    exit.o                 20
+    iarwstd.o              24                 4
+    -------------------------------------------
+    Total:                 44                 4
+
+    Gaps                   14
+    Linker created                  38
+-----------------------------------------------
+    Grand Total:        6 494      430    1 353
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+ADCInit                 0x00001325   0x60  Code  Gb  main.o [1]
+ADCIntClear             0x000015b1    0x8  Code  Gb  adc.o [4]
+ADCIntEnable            0x00001581   0x12  Code  Gb  adc.o [4]
+ADCIntRegister          0x00001569   0x16  Code  Gb  adc.o [4]
+ADCIntStatus            0x00001595   0x1a  Code  Gb  adc.o [4]
+ADCSequenceConfigure    0x000015d1   0x2e  Code  Gb  adc.o [4]
+ADCSequenceDisable      0x000015c5    0xc  Code  Gb  adc.o [4]
+ADCSequenceEnable       0x000015b9    0xc  Code  Gb  adc.o [4]
+ADCSequenceStepConfigure
+                        0x00001601   0x3a  Code  Gb  adc.o [4]
+ADC_EndFlag             0x20000528    0x1  Data  Gb  main.o [1]
+ADC_ISR                 0x000012c5   0x22  Code  Gb  main.o [1]
+CPUcpsid                0x00001aad         Code  Gb  cpu.o [4]
+CPUcpsie                0x00001ab5         Code  Gb  cpu.o [4]
+CPUwfi                  0x00001abd         Code  Gb  cpu.o [4]
+F                       0x20000534    0x4  Data  Gb  kalman.o [1]
+FaultISR                0x00001ad9    0x2  Code  Lc  startup_ewarm.o [1]
+GPIODirModeSet          0x00000ea1   0x4c  Code  Gb  gpio.o [4]
+GPIOPadConfigSet        0x00000eed  0x11e  Code  Gb  gpio.o [4]
+GPIOPinRead             0x0000100d    0x8  Code  Gb  gpio.o [4]
+GPIOPinTypeGPIOInput    0x00001015   0x24  Code  Gb  gpio.o [4]
+GPIOPinTypeUART         0x00001039   0x24  Code  Gb  gpio.o [4]
+Gauss_Jordan            0x0000028d  0x3bc  Code  Gb  matrix.o [1]
+H                       0x20000538    0x4  Data  Gb  kalman.o [1]
+I                       0x20000530    0x4  Data  Gb  kalman.o [1]
+IntDefaultHandler       0x00001adb    0x2  Code  Lc  startup_ewarm.o [1]
+IntEnable               0x00001689   0x74  Code  Gb  interrupt.o [4]
+IntMasterEnable         0x0000163d    0xc  Code  Gb  interrupt.o [4]
+IntRegister             0x00001649   0x3c  Code  Gb  interrupt.o [4]
+K                       0x20000518    0x4  Data  Gb  kalman.o [1]
+KalMan                  0x00000cc9  0x1d8  Code  Gb  kalman.o [1]
+MatrixAdd               0x00000101   0x4a  Code  Gb  matrix.o [1]
+MatrixCal               0x00000649   0x5e  Code  Gb  matrix.o [1]
+MatrixMinus             0x0000014b   0x4a  Code  Gb  matrix.o [1]
+MatrixMul               0x00000195   0xb6  Code  Gb  matrix.o [1]
+MatrixTrans             0x0000024b   0x42  Code  Gb  matrix.o [1]
+NmiSR                   0x00001ad7    0x2  Code  Lc  startup_ewarm.o [1]
+P                       0x20000514    0x4  Data  Gb  kalman.o [1]
+Q                       0x20000520    0x4  Data  Gb  kalman.o [1]
+R                       0x2000053c    0x4  Data  Gb  kalman.o [1]
+Region$$Table$$Base     0x000019d8          --   Gb  - Linker created -
+Region$$Table$$Limit    0x000019fc          --   Gb  - Linker created -
+SysCtlADCSpeedSet       0x000009cd   0x40  Code  Gb  sysctl.o [4]
+SysCtlClockGet          0x00000881  0x14c  Code  Gb  sysctl.o [4]
+SysCtlClockSet          0x00000711  0x170  Code  Gb  sysctl.o [4]
+SysCtlDelay             0x00000709    0x8  Code  Gb  sysctl.o [4]
+SysCtlLDOSet            0x000006fd    0x6  Code  Gb  sysctl.o [4]
+SysCtlPeripheralDisable
+                        0x000006d1   0x26  Code  Gb  sysctl.o [4]
+SysCtlPeripheralEnable  0x000006a9   0x26  Code  Gb  sysctl.o [4]
+Temp1                   0x20000540    0x4  Data  Gb  kalman.o [1]
+Temp2                   0x20000544    0x4  Data  Gb  kalman.o [1]
+Temp3                   0x2000051c    0x4  Data  Gb  kalman.o [1]
+TheSysClock             0x20000548    0x4  Data  Gb  systemInit.o [1]
+UARTConfigSetExpClk     0x00001825   0x38  Code  Gb  uart.o [4]
+UARTDisable             0x00001875   0x1c  Code  Gb  uart.o [4]
+UARTEnable              0x0000185d   0x18  Code  Gb  uart.o [4]
+UARTInit                0x000012e9   0x3c  Code  Gb  main.o [1]
+X                       0x20000510    0x4  Data  Gb  kalman.o [1]
+Z                       0x2000052c    0x4  Data  Gb  kalman.o [1]
+__aeabi_cdcmpeq         0x000019fd         Code  Gb  DblCmpEq.o [5]
+__aeabi_cfcmple         0x00001991         Code  Gb  FltCmpLe.o [5]
+__aeabi_d2f             0x00001705         Code  Gb  DblToFlt.o [5]
+__aeabi_dadd            0x000011dd         Code  Gb  DblAdd.o [5]
+__aeabi_ddiv            0x00000a0d         Code  Gb  DblDiv.o [5]
+__aeabi_dsub            0x0000105d         Code  Gb  DblSub.o [5]
+__aeabi_f2d             0x000018ed         Code  Gb  FltToDbl.o [5]
+__aeabi_fadd            0x00001799         Code  Gb  FltAdd.o [5]
+__aeabi_fmul            0x0000148d         Code  Gb  FltMul.o [5]
+__aeabi_fsub            0x000013a9         Code  Gb  FltSub.o [5]
+__aeabi_idiv0           0x00001ae5         Code  Gb  IntDivZer.o [5]
+__aeabi_uidiv           0x00001a85         Code  Gb  I32DivMod.o [5]
+__aeabi_uidivmod        0x00001a85         Code  Gb  I32DivMod.o [5]
+__exit                  0x00001a99   0x14  Code  Gb  exit.o [6]
+__iar_copy_init2        0x000019b5   0x24  Code  Gb  copy_init2.o [5]
+__iar_dadd              0x000011ef         Code  Gb  DblAdd.o [5]
+__iar_data_init2        0x00001a1d   0x1c  Code  Gb  data_init2.o [5]
+__iar_dsub              0x0000106f         Code  Gb  DblSub.o [5]
+__iar_dsubStart         0x00001081         Code  Gb  DblSub.o [5]
+__iar_fadd              0x000017a7         Code  Gb  FltAdd.o [5]
+__iar_fsub              0x000013b7         Code  Gb  FltSub.o [5]
+__iar_fsubStart         0x000013c5         Code  Gb  FltSub.o [5]
+__iar_program_start     0x00001a55         Code  Gb  cmain.o [5]
+__iar_sh_stdout_close   0x00001a6d   0x14  Code  Gb  iarwstd.o [6]
+__iar_sh_stdout_handle  0x20000524    0x4  Data  Lc  iarwstd.o [6]
+__iar_zero_init2        0x00001a39   0x1a  Code  Gb  zero_init2.o [5]
+__low_level_init        0x00001ae7    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x00000000  0x100  Data  Gb  startup_ewarm.o [1]
+_exit                   0x00001acd         Code  Gb  cexit.o [5]
+_main                   0x00001a67         Code  Gb  cmain.o [5]
+clockInit               0x00001971   0x20  Code  Gb  systemInit.o [1]
+exit                    0x00001add    0x6  Code  Gb  exit.o [3]
+g_pfnRAMVectors         0x20000400  0x100  Data  Lc  interrupt.o [4]
+g_pulRCGCRegs           0x00001ac0    0xc  Data  Lc  sysctl.o [4]
+g_pulXtals              0x00001890   0x5c  Data  Lc  sysctl.o [4]
+jtagWait                0x00001941   0x30  Code  Gb  systemInit.o [1]
+main                    0x00001391   0x18  Code  Gb  main.o [1]
+pulStack                0x20000000  0x400  Data  Lc  startup_ewarm.o [1]
+tCov                    0x20000508    0x8  Data  Gb  kalman.o [1]
+tOpt                    0x20000500    0x8  Data  Gb  kalman.o [1]
+
+
+[1] = E:\»úÆ÷ÈË¶Ó\ARM\EasyARM1138\Ô´³ÌÐò\¿¨¶ûÂüÂË²¨\Debug\Obj
+[2] = command line
+[3] = dl7M_tl_in.a
+[4] = driverlib.a
+[5] = rt7M_tl.a
+[6] = shb_l.a
+
+  6 494 bytes of readonly  code memory
+    430 bytes of readonly  data memory
+  1 353 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
